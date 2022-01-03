@@ -5,7 +5,7 @@ XeLaTeX files for creating ISO envelopes
 :tags: xelatex, envelopes
 :author: Roland Smith
 
-.. Last modified: 2022-01-03T23:45:19+0100
+.. Last modified: 2022-01-03T23:50:10+0100
 .. vim:spelllang=en
 
 History
@@ -35,7 +35,7 @@ Netherlands.
 The sender address is situated about 5 mm from the edges of the envelope;
 a lot of printers cannot print in that area anyway.
 
-This works for me, and I like to keep things simple.
+As far as I'm concerned, this is feature complete.
 So feel free to fork this repo and adapt it to your needs rather than sending
 a pull request.
 
