@@ -5,7 +5,7 @@ XeLaTeX files for creating ISO envelopes
 :tags: xelatex, envelopes
 :author: Roland Smith
 
-.. Last modified: 2022-01-03T23:20:23+0100
+.. Last modified: 2022-01-03T23:45:19+0100
 .. vim:spelllang=en
 
 History
@@ -73,6 +73,9 @@ Then use XeLaTeX to generate a PDF, and print it.
     \newcommand{\recipientpostcode}{9876 AA}
     \newcommand{\recipientkix}{9876AA1XA}
     \newcommand{\recipienttown}{SOMEWHERE}
+
+On a BSD or Linux machine you can use the included Makefile to build the PDF
+files. It has been tested with both BSD make and GNU make
 
 The envelope PDF's are oriented such that you should put it in the printer
 with the short side going into the printer.
