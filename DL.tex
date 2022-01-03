@@ -4,7 +4,7 @@
 % Copyright © 2022 R.F. Smith <rsmith@xs4all.nl>
 % SPDX-License-Identifier: MIT
 % Created: 2022-01-03T22:05:38+0100
-% Last modified: 2022-01-03T22:07:57+0100
+% Last modified: 2022-01-03T22:45:06+0100
 
 %% Fill in the sender details
 \newcommand{\sendername}{S. Ender}
@@ -14,8 +14,8 @@
 %% Fill in the recipient details.
 \newcommand{\recipientname}{R. Ecipient}
 \newcommand{\recipientaddress}{Somehere street 1a}
-\newcommand{\recipientpostcode}{1234 XX}
-\newcommand{\recipientkix}{1234XX1XA}
+\newcommand{\recipientpostcode}{9876 AA}
+\newcommand{\recipientkix}{9876AA1XA}
 \newcommand{\recipienttown}{SOMEWHERE}
 
 % Below this line, no changes should be necessary.
@@ -39,7 +39,8 @@
     \node[rectangle,minimum width=9cm,minimum height=3.5cm] at (2,2.4) {%
         \recipientname\\
         \recipientaddress\\
-        \recipientpostcode\space\space \recipienttown\\
+        \recipientpostcode\space\space \recipienttown\\[2mm]
+        \fontsize{10}{10}
         \kixcode{\recipientkix}
     };
     \special{pdf: put @thispage <</Rotate 90>>}
