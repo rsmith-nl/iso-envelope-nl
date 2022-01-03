@@ -1,0 +1,38 @@
+
+%% Fill in the sender details
+\newcommand{\sendername}{S. Ender}
+\newcommand{\senderaddress}{Nowhere street 42}
+\newcommand{\senderpostcode}{9999 ZZ}
+\newcommand{\sendertown}{NOWHERE}
+%% Fill in the recipient details.
+\newcommand{\recipientname}{R. Ecipient}
+\newcommand{\recipientaddress}{Somehere street 1a}
+\newcommand{\recipientpostcode}{1234 XX}
+\newcommand{\recipientkix}{1234XX1XA}
+\newcommand{\recipienttown}{SOMEWHERE}
+
+% Below this line, no changes should be necessary.
+\documentclass[tikz=true]{standalone} % {{{1
+% The tikz=true option makes every tikzpicture into a separate page.
+% For XeLaTeX.
+\usepackage[quiet,no-math]{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{TeX Gyre Heros}
+\newfontface\kix{KIX Barcode}
+\font\kixfont=kix
+\def\kixcode#1{\kix #1}
+
+\begin{document} % {{{1
+\begin{tikzpicture}
+    [align=left,anchor=south west]
+    \draw[color=white] (0,0) rectangle (22.9,16.2);
+    \node[font=\scriptsize,anchor=north west] at (0.6,15.7) {%
+        \sendername{} \senderaddress{} \senderpostcode\space\space \sendertown};
+    \node[rectangle,minimum width=11cm,minimum height=4cm] at (2,7.2) {%
+        \recipientname\\
+        \recipientaddress\\
+        \recipientpostcode\space\space \recipienttown\\
+        \kixcode{\recipientkix}
+    };
+\end{tikzpicture}
+\end{document}
