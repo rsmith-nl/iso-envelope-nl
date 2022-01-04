@@ -4,7 +4,7 @@
 % Copyright © 2022 R.F. Smith <rsmith@xs4all.nl>
 % SPDX-License-Identifier: MIT
 % Created: 2022-01-03T22:05:38+0100
-% Last modified: 2022-01-03T22:45:06+0100
+% Last modified: 2022-01-04T22:06:58+0100
 
 %% Fill in the sender details
 \newcommand{\sendername}{S. Ender}
@@ -27,7 +27,7 @@
 \setmainfont{TeX Gyre Heros}
 \newfontface\kix{KIX Barcode}
 \font\kixfont=kix
-\def\kixcode#1{\kix #1}
+\def\kixcode#1{\kix\fontsize{10}{10}\selectfont #1}
 
 \begin{document} % {{{1
 \begin{tikzpicture}
@@ -40,7 +40,6 @@
         \recipientname\\
         \recipientaddress\\
         \recipientpostcode\space\space \recipienttown\\[2mm]
-        \fontsize{10}{10}
         \kixcode{\recipientkix}
     };
     \special{pdf: put @thispage <</Rotate 90>>}
